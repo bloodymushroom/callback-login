@@ -1,0 +1,13 @@
+{
+  "name": "callbacklogin",
+  "version": "1.0.0",
+  "description": "Login page for Callback App",
+  "main": "index.js",
+  "author": "Emm",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1",
+    "react": "^15.4.2",
+    "webpack": "^2.2.1"
+  }
+}
