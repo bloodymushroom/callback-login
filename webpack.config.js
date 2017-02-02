@@ -17,12 +17,12 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist'),
-    publicPath: '/dist/'
+    publicPath: '/dist'
   },
   devServer: {
     hot: true,
-    // contentBase: path.join(__dirname, 'dist'),
-    outputPath: path.join(__dirname, 'dist')
+    contentBase: path.join(__dirname, 'static'),
+    publicPath: '/dist'
   },
   module: {
     rules: [{

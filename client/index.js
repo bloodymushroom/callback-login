@@ -24,7 +24,7 @@ export default class Index extends Component {
   render() {
     return (
       <div>
-        Hello World! Did this update? 
+        Hello World! Did this update? dddddddd
         <div>
           Count: {this.state.count}
         </div>
