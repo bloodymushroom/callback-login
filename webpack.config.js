@@ -2,26 +2,28 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    // activate HMR for React
+  entry: {
+    app: [
+      'react-hot-loader/patch',
+      // activate HMR for React
 
-    'webpack-dev-server/client?http://localhost:8080',
-    // bundle the client for webpack-dev-server
-    // and connect to the provided endpoint
+      'webpack-dev-server/client?http://localhost:8080',
+      // bundle the client for webpack-dev-server
+      // and connect to the provided endpoint
 
-    'webpack/hot/only-dev-server',
+      'webpack/hot/only-dev-server',
 
-    './client/app.js'
-  ],
+      './client/app.js'
+    ]
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.join(__dirname, 'dist'),
     publicPath: '/dist'
   },
   devServer: {
     hot: true,
-    contentBase: path.join(__dirname, 'static'),
+    contentBase: path.join(__dirname, 'dist'),
     publicPath: '/dist'
   },
   module: {
